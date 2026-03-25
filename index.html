@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canteen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="S    e    a    r     c    h">
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">Login</a>
+        <a href="#">Contact us</a>
+    </div>
+
+</div>
+
+<h1 class="heading"> <span class="welcome-text"> Welcome </span> to <span class="brand-text"> GGDSD </span>
+   college  canteen </h1>
+
+<div class="container">
+
+    <!-- LEFT MENU -->
+    <div class="sidebar">
+        <h2 class="menu-title">MENU</h2>
+        <ul>
+            <li onclick="goToCategory('shakes')">Shakes</li>
+            <li onclick="goToCategory('burger')">Burger</li>
+            <li onclick="goToCategory('sandwich')">Sandwich</li>
+            <li onclick="goToCategory('noodles')">Noodles</li>
+            <li onclick="goToCategory('desserts')">Desserts</li>
+            <li onclick="goToCategory('chaat')">Chaat</li>
+            <li onclick="goToCategory('pasta')">Pasta</li>
+            <li onclick="goToCategory('pizza')">Pizza</li>
+        </ul>
+    </div>
+
+    <!-- ITEMS -->
+    <div class="menu-grid">
+
+        <div class="card" onclick="goToCategory('shakes')">
+            <img src="Picture1.png">
+            <p>Shakes</p>
+        </div>
+
+        <div class="card" onclick="goToCategory('burger')" id="burger">
+            <img src="Picture2.png">
+            <p>Burger</p>
+        </div>
+
+        <div class="card" onclick="goToCategory('sandwich')" id="sandwich">
+            <img src="Picture3.png">
+            <p>Sandwich</p>
+        </div>
+
+        <div class="card" onclick="goToCategory('noodles')" id="noodles">
+            <img src="Picture4.png">
+            <p>Noodles</p>
+        </div>
+        <div class="card" onclick="goToCategory('Desserts')">
+            <img src="Picture5.png">
+            <p>Desserts</p>
+        </div>
+        <div class="card" onclick="goToCategory('Chaat')">
+            <img src="Picture6.png">
+            <p>Chaats</p>
+        </div>
+        <div class="card" onclick="goToCategory('Pasta')" id="pasta">
+            <img src="Picture7.png">
+            <p>Pasta</p>
+        </div>
+        <div class="card" onclick="goToCategory('Pizza')" id="pizza">
+            <img src="Picture8.png">
+            <p>Pizza</p>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
