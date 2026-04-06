@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>form</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+background-image:url('pic403.JPG');
+background-repeat: no repeat;
+background-size: 1400px 700px;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.bill-box {
+
+left: 300px;
+margin-top: -50;
+padding: 70px;
+width: 500px;
+border-radius: 10px;
+text-align: left;
+color: white;
+margin-left: 600px;
+}
+p {
+font-size: 30px;
+margin: 10px 0;
+color: white;
+
+
+}
+button {
+padding: 10px;
+width: 200px;
+background-color: green;
+color: white;
+border: none;
+font-size: 20px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="bill-box">
+<h1>Your bill</h1>
+
+<p id="name"></p>
+<p id="phone"></p>
+<p>items: Burger, Pizza</p>
+<p>Total: Rs 500</p>
+
+<button onclick="confirmOrder()">Confirm Order</button>
+</div>
+<script>
+
+//get data from localstorage
+let name=localStorage.getItem("name");
+let phone=localStorage.getItem("phone");
+
+//show on screen
+document.getElementById("name").innerText="Name: "+name;
+document.getElementById("phone").innerText="Phone: "+phone;
+
+function confirmOrder()
+{
+alert("Order Confirmed!");
+}
+</script>
+</body>
+</html>

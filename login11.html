@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>form</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+background-image:url('pic403.JPG');
+background-repeat: no repeat;
+background-size: 1400px 700px;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+form {
+position: relative;
+left: 300px;
+margin-top: -50px;
+font-size: 50px;
+padding: 70px;
+width: 300px;
+border-radius: 10px;
+text-align: left;
+
+}
+input {
+padding: 10px;
+margin: 10px;
+width: 300px;
+height: 40px;
+font-size: 18px;
+
+}
+input[type="submit"] {
+background-color: green;
+color: white;
+border: none;
+width: 200px;
+height: 45px;
+font-size: 18px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<form id="loginForm" onsubmit="return saveUser(event)">
+<h style="color:white;">Login form</h1>
+<input type="text" id="name" placeholder="enter name" required>
+<input type="number" id="phone" placeholder="enter phone number" required>
+<input type="submit" value="submit">
+</form>
+
+<script>
+function saveUser(event) {
+event.preventDefault(); //stops page refresh
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+
+//check if user entered something
+if(name==="" ||phone==="") {
+alert("please enter details");
+return false;
+}
+
+// store login status
+localStorage.setItem("name",name);
+localStorage.setItem("phone",phone);
+
+window.location.href="billnew.html";
+return false;
+}
+</script>
+</body>
+</html>
